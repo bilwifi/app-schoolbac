@@ -3,7 +3,7 @@
 require("dotenv").config();
 const express = require("express")
 const app = express();
-const server = require("http").Server(app)
+// const server = require("http").Server(app)
 const { config } = require("process");
 const PORT = process.env.port || 5001;
 
@@ -38,4 +38,4 @@ app.get('/audio:room',(req,res)=>{
 })
 
 
- server.listen(PORT,()=>{console.log(`Server running on port ${PORT}`)})
+ app.listen(PORT,()=>{console.log(`Server running on port ${PORT}`)})
